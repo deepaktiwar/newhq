@@ -132,7 +132,7 @@ class Bot(discord.Client):
         self.answer_scores = answer_scores
 
         # embed creation
-        self.embed=discord.Embed(title= "__**LOCO TRIVIA**__", description="**Loco Deep searching.....**", color=0x98FB98)
+        self.embed=discord.Embed(title= "__**CONFETTI TRIVIA**__", description="**Confetti Deep searching.....**", color=0xFFOOFF)
         self.embed.set_author(name ='',url=' ',icon_url='https://cdn.discordapp.com/attachments/592598263996088320/618292227633971230/images.png')
         self.embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/594012615164821523/610794247313948672/videotogif_2019.08.05_22.43.53.gif")
         
@@ -144,7 +144,7 @@ class Bot(discord.Client):
         self.embed.add_field(name="**__ANSWER 3__**", value="~~0.0~~", inline=False)
         
         
-        self.embed.set_footer(text=f"made by ⎝⧹𝗗𝗿. BOSS™╱⎠"                , \
+        self.embed.set_footer(text=f"made❤ by ⎝⧹𝗗𝗿. BOSS™╱⎠ & ⎝𝑹𝑨𝑱𝑨⎠"                , \
             icon_url="https://cdn.discordapp.com/attachments/626453661413015552/628458541065306133/IMG_20190912_144400.jpg")
 
         #await self.bot.add_reaction(embed,':spy:')
@@ -218,7 +218,7 @@ class Bot(discord.Client):
         await self.clear_results()
         await self.update_embeds()
         #await self.change_presence(activity=discord.Game(name='with '+str(len(set(self.get_all_members())))+' users'))
-        await self.change_presence(activity=discord.Activity(type=1,name='with Loco Answer'))
+        await self.change_presence(activity=discord.Activity(type=1,name='with CONFETTI ANSWER'))
 
     async def on_message(self, message):
 
@@ -226,7 +226,7 @@ class Bot(discord.Client):
         if message.author == self.user or message.guild == None:
             return
 
-        if message.content.lower() == "lo":
+        if message.content.lower() == "ci":
             await message.delete()
             if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
                 self.embed_msg = None
@@ -273,7 +273,7 @@ def bot_with_cyclic_update_process(update_event, answer_scores):
     upd_thread.start()
 
     loop = asyncio.get_event_loop()
-    loop.create_task(bot.start('NjE4MzU0ODE4MDEyMDIwNzM4.XZIzJA.DsmRI31ffArPMG9-VyJC3PYHNCQ'))
+    loop.create_task(bot.start('NjE4Mzk2MTAyMTE0NDEwNTA2.XZgM9g.EuBYGi_tif-EVHJ1G_n0jaQTOlM'))
     loop.run_forever()
 
 
